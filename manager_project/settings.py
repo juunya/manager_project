@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'manager_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-if "COMPUTER-NAME" in hostname:
+# if "COMPUTER-NAME" in hostname:
     # デバッグ環境
     # DEBUG = True // 筆者はデバッグモードの切り替えもここでやってしまった
     DATABASES = {
@@ -90,15 +90,15 @@ if "COMPUTER-NAME" in hostname:
         }
     }
     ALLOWED_HOSTS = [] # よくわからんけど、これも大事らしい
-else:
+# else:
     # 本番環境
     # DEBUG = False
-    import dj_database_url
-    db_from_env = dj_database_url.config()
-    DATABASES = {
-        'default': dj_database_url.config()
-    }
-    ALLOWED_HOSTS = ['*']
+    # import dj_database_url
+    # db_from_env = dj_database_url.config()
+    # DATABASES = {
+    #     'default': dj_database_url.config()
+    # }
+    # ALLOWED_HOSTS = ['*']
 
 
 # Password validation
